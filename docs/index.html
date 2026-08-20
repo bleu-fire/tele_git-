@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tg-sync — Telegram Git Sync Tool</title>
+    <meta name="description" content="A modern CLI tool to automatically package and sync your modified git files to Telegram.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        pre, code {
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-blue-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="border-b border-slate-900 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="../icon.jpeg" alt="tg-sync logo" class="w-9 h-9 rounded-lg border border-slate-800 group-hover:scale-105 transition-transform">
+                <span class="font-extrabold text-xl tracking-tight bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">tg-sync</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+                <a href="#features" class="hover:text-slate-100 transition-colors">Features</a>
+                <a href="#installation" class="hover:text-slate-100 transition-colors">Installation</a>
+                <a href="#configuration" class="hover:text-slate-100 transition-colors">Configuration</a>
+                <a href="#usage" class="hover:text-slate-100 transition-colors">Usage</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/bleu-fire/tele_git-" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-100 px-4 py-2 rounded-lg text-sm font-semibold inline-flex items-center gap-2 transition-all">
+                    <!-- GitHub Icon -->
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32 overflow-hidden border-b border-slate-900 bg-radial-gradient">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/10 via-slate-950/50 to-slate-950 z-0"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-6">
+                <span>New</span>
+                <span class="w-1 h-1 rounded-full bg-blue-400"></span>
+                <span>Debian Package & Wizard Setup</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Package and Sync Git Files to <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Telegram</span> Instantly
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto font-light">
+                A modern, developer-friendly CLI tool that packages modified, staged, or untracked files into a secure ZIP and uploads it directly to Telegram with a simple command.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#installation" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-blue-500/20">
+                    Get Started
+                </a>
+                <a href="https://github.com/bleu-fire/tele_git-" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold px-8 py-3.5 rounded-xl transition-all">
+                    View Source
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 max-w-6xl mx-auto px-6 border-b border-slate-900">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-white mb-4">Why use tg-sync?</h2>
+            <p class="text-slate-400">Designed to be simple, fast, and secure for everyday developer workflows.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl hover:border-slate-800 transition-all">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-6 font-bold text-lg">📦</div>
+                <h3 class="text-lg font-bold text-white mb-3">Auto Packaging</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Automatically detects unstaged, staged, and untracked files, zipping them up while preserving your workspace's directory layout.</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl hover:border-slate-800 transition-all">
+                <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 mb-6 font-bold text-lg">🐧</div>
+                <h3 class="text-lg font-bold text-white mb-3">Debian Native</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Package it as a native <code>.deb</code> package for easy system-wide distribution and automated dependency management via <code>apt</code>.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl hover:border-slate-800 transition-all">
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-6 font-bold text-lg">⚡</div>
+                <h3 class="text-lg font-bold text-white mb-3">Interactive Setup</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">A smart configuration wizard runs automatically on your first launch to seamlessly configure your Telegram bot credentials.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="py-20 max-w-4xl mx-auto px-6 border-b border-slate-900">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">Installation</h2>
+
+        <div class="space-y-8">
+            <!-- Debian installation -->
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 md:p-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-md text-xs font-semibold border border-blue-500/20">Option 1</span>
+                    <h3 class="text-xl font-bold text-white">Debian / Ubuntu Package (Recommended)</h3>
+                </div>
+                <p class="text-slate-400 text-sm mb-6">Builds a system package that manages Python dependencies system-wide.</p>
+                <div class="space-y-3">
+                    <div class="bg-slate-950 rounded-lg p-4 border border-slate-900 text-sm overflow-x-auto">
+                        <span class="text-slate-500"># 1. Build the Debian package</span><br>
+                        <span class="text-blue-400">./build_deb.sh</span><br><br>
+                        <span class="text-slate-500"># 2. Install it locally</span><br>
+                        <span class="text-blue-400">sudo apt install ./tele-git_1.0.0_all.deb</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standard installation -->
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 md:p-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-slate-800 text-slate-400 px-3 py-1 rounded-md text-xs font-semibold border border-slate-700">Option 2</span>
+                    <h3 class="text-xl font-bold text-white">Manual CLI Setup</h3>
+                </div>
+                <p class="text-slate-400 text-sm mb-6">Runs within a local Python virtual environment.</p>
+                <div class="bg-slate-950 rounded-lg p-4 border border-slate-900 text-sm overflow-x-auto">
+                    <span class="text-slate-500"># Clone repo</span><br>
+                    <span class="text-blue-400">git clone https://github.com/bleu-fire/tele_git-.git</span><br>
+                    <span class="text-blue-400">cd tele_git-</span><br><br>
+                    <span class="text-slate-500"># Set up environment</span><br>
+                    <span class="text-blue-400">python3 -m venv venv</span><br>
+                    <span class="text-blue-400">source venv/bin/activate</span><br>
+                    <span class="text-blue-400">pip install -r requirements.txt</span><br><br>
+                    <span class="text-slate-500"># Run setup wrapper script</span><br>
+                    <span class="text-blue-400">./setup.sh</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Configuration & Usage Section -->
+    <section id="configuration" class="py-20 max-w-4xl mx-auto px-6 border-b border-slate-900">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">Configuration & Usage</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Configuration</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    If credentials are not detected in your environment or configuration files, `tg-sync` will launch an interactive wizard automatically.
+                </p>
+                <div class="bg-slate-950 rounded-lg p-4 border border-slate-900 text-sm overflow-x-auto">
+                    <span class="text-slate-500"># Run setup wizard at any time</span><br>
+                    <span class="text-blue-400">tg-sync config</span><br><br>
+                    <span class="text-slate-500"># Verify the active version</span><br>
+                    <span class="text-blue-400">tg-sync --version</span>
+                </div>
+            </div>
+            
+            <div id="usage">
+                <h3 class="text-xl font-bold text-white mb-4">CLI Usage</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Run the command from anywhere inside your Git repository.
+                </p>
+                <div class="bg-slate-950 rounded-lg p-4 border border-slate-900 text-sm overflow-x-auto">
+                    <span class="text-slate-500"># Sync modified/untracked files</span><br>
+                    <span class="text-blue-400">tg-sync</span><br><br>
+                    <span class="text-slate-500"># Sync with a custom message description</span><br>
+                    <span class="text-blue-400">tg-sync -m "feat: new CLI dashboard"</span><br><br>
+                    <span class="text-slate-500"># Sync all tracked repository files</span><br>
+                    <span class="text-blue-400">tg-sync --all</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-950 border-t border-slate-900 text-slate-500 text-sm text-center">
+        <div class="max-w-6xl mx-auto px-6 space-y-4">
+            <p>Released under the <a href="https://github.com/bleu-fire/tele_git-/blob/main/LICENSE" class="text-slate-400 hover:text-white transition-colors">GNU GPLv3 License</a>.</p>
+            <p>© 2026 bleu-fire. Open source developer tool.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
