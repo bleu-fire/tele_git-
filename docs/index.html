@@ -26,7 +26,7 @@
     <header class="border-b border-slate-900 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3 group">
-                <img src="../icon.jpeg" alt="tg-sync logo" class="w-9 h-9 rounded-lg border border-slate-800 group-hover:scale-105 transition-transform">
+                <img src="./icon.jpeg" alt="tg-sync logo" class="w-9 h-9 rounded-lg border border-slate-800 group-hover:scale-105 transition-transform">
                 <span class="font-extrabold text-xl tracking-tight bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">tg-sync</span>
             </a>
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
@@ -84,21 +84,27 @@
         <div class="grid md:grid-cols-3 gap-8">
             <!-- Feature 1 -->
             <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl hover:border-slate-800 transition-all">
-                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-6 font-bold text-lg">📦</div>
+                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-6 font-bold text-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                </div>
                 <h3 class="text-lg font-bold text-white mb-3">Auto Packaging</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Automatically detects unstaged, staged, and untracked files, zipping them up while preserving your workspace's directory layout.</p>
             </div>
             
             <!-- Feature 2 -->
             <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl hover:border-slate-800 transition-all">
-                <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 mb-6 font-bold text-lg">🐧</div>
+                <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 mb-6 font-bold text-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                </div>
                 <h3 class="text-lg font-bold text-white mb-3">Debian Native</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Package it as a native <code>.deb</code> package for easy system-wide distribution and automated dependency management via <code>apt</code>.</p>
             </div>
 
             <!-- Feature 3 -->
             <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl hover:border-slate-800 transition-all">
-                <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-6 font-bold text-lg">⚡</div>
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-6 font-bold text-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
                 <h3 class="text-lg font-bold text-white mb-3">Interactive Setup</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">A smart configuration wizard runs automatically on your first launch to seamlessly configure your Telegram bot credentials.</p>
             </div>
